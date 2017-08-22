@@ -29,6 +29,7 @@ module.exports = {
     },
     validate: {
       default: concurrent.nps('lint'),
+      dependencies: 'nsp check',
       withCoverage: concurrent.nps('validate', 'test.coverage')
     }
   }

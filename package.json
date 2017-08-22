@@ -8,15 +8,8 @@
   "repository": "https://github.com/rockchalkwushock/microauth-vkontakte.git",
   "bugs": "https://github.com/rockchalkwushock/microauth-vkontakte/issues",
   "main": "lib/index.js",
-  "files": [
-    "lib",
-    "LICENSE"
-  ],
-  "keywords": [
-    "micro",
-    "oauth2",
-    "vkontakte"
-  ],
+  "files": ["lib", "LICENSE"],
+  "keywords": ["micro", "oauth2", "vkontakte"],
   "scripts": {
     "commit": "nps commit",
     "precommit": "lint-staged && nps validate",
@@ -33,15 +26,16 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "yarn prettier",
-      "git add"
-    ]
+    "*.js": ["yarn prettier", "git add"]
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
   },
   "devDependencies": {
     "babel-plugin-transform-object-rest-spread": "~6.26.0",
     "codecov": "~2.3.0",
     "commitizen": "~2.9.6",
+    "condition-circle": "~1.5.0",
     "cz-conventional-changelog": "~2.0.0",
     "eslint": "~4.4.1",
     "eslint-config-equimper": "~2.2.1",
@@ -51,7 +45,8 @@
     "lint-staged": "~4.0.3",
     "nps": "~5.7.0",
     "nps-utils": "~1.3.0",
+    "nsp": "~2.7.0",
     "prettier": "~1.5.3",
-    "semantic-release": "^7.0.2"
+    "semantic-release": "~7.0.2"
   }
 }

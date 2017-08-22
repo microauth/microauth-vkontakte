@@ -1,26 +1,53 @@
 version: 2
 jobs:
-  build:
-    working_directory: ~/microauth-vkontakte
+  checkout_code:
     docker:
       - image: circleci/node:latest
+    working_directory: ~/microauth-vkontakte
     steps:
       - checkout
-      # Download and cache dependencies
+      - run: echo $CIRCLE_SHA1 > .circle-sha
+      - save_cache:
+          key: v1-repo-{{ checksum ".circle-sha" }}
+          paths:
+            - ~/microauth-vkontakte
+  install_dependencies:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/microauth-vkontakte
+    steps:
+      - run: echo $CIRCLE_SHA1 > .circle-sha
+      - restore_cache:
+          key: v1-repo-{{ checksum ".circle-sha" }}
       - restore_cache:
           keys:
-          - repo-yarn-{{ checksum "yarn.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - repo-yarn-
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            - v1-dependencies-
       - run: yarn install
       - save_cache:
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
           paths:
-            - ~/.yarn-cache
-          key: repo-yarn-{{ checksum "yarn.lock" }}
-      # Run validation checks & generate coverage reports
+            - ~/microauth-vkontakte/.yarn-cache
+  test:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/microauth-vkontakte
+    steps:
+      - run: echo $CIRCLE_SHA1 > .circle-sha
+      - restore_cache:
+          key: v1-repo-{{ checksum ".circle-sha" }}
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            - v1-dependencies-
+      # Install dependencies
+      - run: yarn install
+      # Using `nsp` check for vulnerabilities in package dependencies.
+      - run: yarn start validate.dependencies
+      # Validate the code through: linting, type-checking, & testing that will generate coverage.
       - run: yarn start validate.withCoverage
-      # Send coverage report to Codecov
-      - run: yarn start reportCoverage
+      # Report coverage to CodeCov.
+      - run: yarn reportCoverage
       - store_artifacts:
           path: ./coverage/clover.xml
           prefix: tests
@@ -29,6 +56,45 @@ jobs:
           prefix: coverage
       - store_test_results:
           path: ./coverage/clover.xml
+  release:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/microauth-vkontakte
+    steps:
+      - run: echo $CIRCLE_SHA1 > .circle-sha
+      - restore_cache:
+          key: v1-repo-{{ checksum ".circle-sha" }}
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            - v1-dependencies-
+      - run: yarn install
+      # Publish to NPM with `semantic-release`.
+      - run: yarn start release
 # TODO: Setup Workflows
 # https://circleci.com/docs/2.0/configuration-reference/#workflows
 # https://circleci.com/docs/2.0/workflows/#branch-level-job-execution
+workflows:
+  version: 2
+  test_and_release:
+    jobs:
+      - checkout_code
+      - install_dependencies:
+          requires:
+            - checkout_code
+      - test:
+          requires:
+            - install_dependencies
+      - hold:
+          type: approval
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
+      - release:
+          requires:
+            - hold
+          filters:
+            branches:
+              only: master

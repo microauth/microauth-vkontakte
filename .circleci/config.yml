@@ -1,0 +1,34 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/microauth-vkontakte
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - repo-yarn-{{ checksum "yarn.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - repo-yarn-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - ~/.yarn-cache
+          key: repo-yarn-{{ checksum "yarn.lock" }}
+      # Run validation checks & generate coverage reports
+      - run: yarn start validate.withCoverage
+      # Send coverage report to Codecov
+      - run: yarn start reportCoverage
+      - store_artifacts:
+          path: ./coverage/clover.xml
+          prefix: tests
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+      - store_test_results:
+          path: ./coverage/clover.xml
+# TODO: Setup Workflows
+# https://circleci.com/docs/2.0/configuration-reference/#workflows
+# https://circleci.com/docs/2.0/workflows/#branch-level-job-execution

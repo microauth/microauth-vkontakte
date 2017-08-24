@@ -2,14 +2,21 @@
   "name": "microauth-vkontakte",
   "version": "0.0.0-development",
   "license": "MIT",
-  "description": "Vkontakte Oauth for micro.",
+  "description": "Vkontakte OAuth for micro.",
   "author": "Cody Brunner <rockchalkwushock@icloud.com> (https://rcws-development.com)",
   "homepage": "https://github.com/rockchalkwushock/microauth-vkontakte#readme",
   "repository": "https://github.com/rockchalkwushock/microauth-vkontakte.git",
   "bugs": "https://github.com/rockchalkwushock/microauth-vkontakte/issues",
   "main": "lib/index.js",
-  "files": ["lib", "LICENSE"],
-  "keywords": ["micro", "oauth2", "vkontakte"],
+  "files": [
+    "lib",
+    "LICENSE"
+  ],
+  "keywords": [
+    "micro",
+    "oauth2",
+    "vkontakte"
+  ],
   "scripts": {
     "commit": "nps commit",
     "precommit": "lint-staged && nps validate",
@@ -26,12 +33,25 @@
     }
   },
   "lint-staged": {
-    "*.js": ["yarn prettier", "git add"]
+    "*.js": [
+      "yarn prettier",
+      "git add"
+    ]
   },
   "release": {
     "verifyConditions": "condition-circle"
   },
+  "peerDependencies": {
+    "micro": ">=7.3.0"
+  },
+  "dependencies": {
+    "micro-redirect": "~1.0.0",
+    "request": "~2.81.0",
+    "request-promise": "~4.2.0",
+    "uuid": "~3.0.1"
+  },
   "devDependencies": {
+    "babel-cli": "~6.26.0",
     "babel-plugin-transform-object-rest-spread": "~6.26.0",
     "codecov": "~2.3.0",
     "commitizen": "~2.9.6",

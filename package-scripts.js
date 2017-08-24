@@ -1,9 +1,12 @@
 const npsUtils = require('nps-utils')
 
-const { concurrent, rimraf, series } = npsUtils
+const { concurrent, crossEnv, rimraf, series } = npsUtils
 
 module.exports = {
   scripts: {
+    build: `${crossEnv(
+      'BABEL_ENV=build'
+    )} babel src --out-dir lib --plugins=transform-object-rest-spread`,
     clean: series(
       rimraf('coverage'),
       rimraf('lib'),
@@ -15,6 +18,11 @@ module.exports = {
     lint: {
       default: 'eslint src __tests__',
       fix: series.nps('lint --fix')
+    },
+    package: {
+      default: series.nps('build', 'devPublish.pack', 'devPublish.open'),
+      open: 'open microauth-vkontakte-0.0.0-development.tgz',
+      pack: 'npm pack'
     },
     release: series(
       'semantic-release pre',

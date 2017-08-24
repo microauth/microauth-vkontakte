@@ -1,5 +1,7 @@
 # microauth-vkontakte :closed_lock_with_key:
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rockchalkwushock/microauth-vkontakte.svg)](https://greenkeeper.io/)
+
 [![npm](https://img.shields.io/npm/v/microauth-vkontakte.svg?style=flat-square)](https://www.npmjs.com/package/microauth-vkontakte)
 [![npm](https://img.shields.io/npm/l/microauth-vkontakte.svg?style=flat-square)](https://www.npmjs.com/package/microauth-vkontakte)
 [![npm](https://img.shields.io/npm/dt/microauth-vkontakte.svg?style=flat-square)](https://www.npmjs.com/package/microauth-vkontakte)

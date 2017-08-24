@@ -47,7 +47,7 @@ jobs:
       # Validate the code through: linting, type-checking, & testing that will generate coverage.
       - run: yarn start validate.withCoverage
       # Report coverage to CodeCov.
-      - run: yarn reportCoverage
+      - run: yarn start reportCoverage
       - store_artifacts:
           path: ./coverage/clover.xml
           prefix: tests

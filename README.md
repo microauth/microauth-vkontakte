@@ -19,6 +19,8 @@
 
 > Vkontakte OAuth for [`micro`](https://github.com/zeit/micro).
 
+Currently in `alpha` should not be used in production until stable version is released.
+
 ## Todo
 
 - [ ] Clean up internal documentation.

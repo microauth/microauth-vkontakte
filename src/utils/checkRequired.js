@@ -5,7 +5,6 @@ module.exports = obj => {
   if (keys.length < 3) {
     throw new Error('Must provide configuration options!')
   }
-  // return keys.filter(key => console.log(`${key}`, obj[key]))
   keys.forEach(key => {
     const val = obj[key]
     if (!val) {

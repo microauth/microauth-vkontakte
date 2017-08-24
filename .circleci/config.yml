@@ -69,6 +69,8 @@ jobs:
             - v1-dependencies-{{ checksum "yarn.lock" }}
             - v1-dependencies-
       - run: yarn install
+      # Build the './lib' for distribution.
+      - run: yarn start build
       # Publish to NPM with `semantic-release`.
       - run: yarn start release
 # Workflows

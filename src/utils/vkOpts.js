@@ -2,8 +2,8 @@ module.exports = {
   clientId: undefined,
   clientSecret: undefined,
   display: 'page', // 'page', 'popup', 'mobile'
-  fields: [],
-  path: '/auth/vkontakte', // QUESTION: Should I make this an object & freeze it?
+  fields: [], // Should default 'fields' be provided? If so must document.
+  path: '/auth/vkontakte',
   redirectUrl: undefined,
-  scope: []
+  scope: [] // Should default 'scope' be provided? If so must document.
 }

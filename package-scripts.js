@@ -26,7 +26,7 @@ module.exports = {
     },
     release: series(
       'semantic-release pre',
-      'npm publish',
+      'npm publish --tag=alpha', // TODO: Remember to change this!!!
       'semantic-release post'
     ),
     reportCoverage: 'codecov',

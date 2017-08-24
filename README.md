@@ -1,7 +1,5 @@
 # microauth-vkontakte :closed_lock_with_key:
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/rockchalkwushock/microauth-vkontakte.svg)](https://greenkeeper.io/)
-
 [![npm](https://img.shields.io/npm/v/microauth-vkontakte.svg?style=flat-square)](https://www.npmjs.com/package/microauth-vkontakte)
 [![npm](https://img.shields.io/npm/l/microauth-vkontakte.svg?style=flat-square)](https://www.npmjs.com/package/microauth-vkontakte)
 [![npm](https://img.shields.io/npm/dt/microauth-vkontakte.svg?style=flat-square)](https://www.npmjs.com/package/microauth-vkontakte)
@@ -14,6 +12,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/rockchalkwushock/microauth-vkontakte/pulls)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![nps](https://img.shields.io/badge/scripts%20run%20with-nps-blue.svg?style=flat-square)](https://github.com/kentcdodds/nps)
@@ -26,8 +25,8 @@ Currently in `alpha` should not be used in production until stable version is re
 ## Todo
 
 - [ ] Clean up internal documentation.
-- [ ] Enable GreenKeeper.
-- [ ] Add `all-contributors`.
+- [x] Enable GreenKeeper.
+- [x] Add `all-contributors`.
 - [ ] Code Review, if possible.
 - [ ] Clean up README.
 - [ ] Make public & publish to NPM.
@@ -87,6 +86,10 @@ module.exports = vkontakteAuth(async (req, res, auth) => {
 })
 ```
 
+## Contributing
+
+Please read the [CONTRIBUTING.md](https://github.com/rockchalkwushock/microauth-vkontakte/blob/master/CONTRIBUTING.md)
+
 ## Development & Testing
 
 ```sh
@@ -102,3 +105,15 @@ npm start package
 # or
 yarn start package
 ```
+
+## License
+
+[MIT](https://github.com/rockchalkwushock/microauth-vkontakte/blob/master/LICENSE)
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section --><!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

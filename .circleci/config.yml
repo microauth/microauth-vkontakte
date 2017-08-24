@@ -1,3 +1,5 @@
+# TODO: greenkeepre.lockfile integration
+# https://github.com/greenkeeperio/greenkeeper-lockfile
 version: 2
 jobs:
   checkout_code:

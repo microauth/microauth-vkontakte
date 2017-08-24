@@ -14,6 +14,10 @@ module.exports = {
       rimraf('*.tgz')
     ),
     commit: 'git cz',
+    contributors: {
+      add: 'all-contributors add',
+      generate: 'all-contributors generate'
+    },
     default: 'nps',
     lint: {
       default: 'eslint src __tests__',

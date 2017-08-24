@@ -1,0 +1,16 @@
+{
+  "name": "microauth-vkontakte-example",
+  "version": "0.1.0",
+  "description": "Basic example for using this package.",
+  "main": "index.js",
+  "author": "Cody Brunner <rockchalkwushock@icloud.com> (https://rcws-development.com)",
+  "license": "MIT",
+  "scripts": {
+    "now-start": "NODE_ENV=production micro index.js",
+    "start": "NODE_ENV=development micro index.js"
+  },
+  "dependencies": {
+    "micro": "~8.0.3",
+    "microauth-vkontakte": "latest"
+  }
+}

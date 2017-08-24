@@ -9,10 +9,9 @@ What issue is this in reference too?
 
 ## Guidelines for Merging
 
-1. All code must pass `flow-type checking`.
-2. All code must pass `linting`.
-3. Any code added must be tested and maintain coverage.
-4. Any code updated or removed must not break the build & coverage.
+1. All code must pass `linting`.
+2. Any code added must be tested and maintain coverage.
+3. Any code updated or removed must not break the build & coverage.
 
 ## Brief Steps Summary
 
@@ -23,7 +22,7 @@ $ git add -A
 ### confirm correct files are present.
 $ git status
 $ npm run commit || yarn commit
-### If linting, flow-type checking, or testing fails fix and repeat.
+### If linting or testing fails fix and repeat.
 ### Fill in the pertinent information based on your changes in the commitizen log.
 $ git push origin <branch>
 ### Open a Pull Request.

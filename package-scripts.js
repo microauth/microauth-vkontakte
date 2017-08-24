@@ -14,19 +14,23 @@ module.exports = {
       rimraf('*.tgz')
     ),
     commit: 'git cz',
+    contributors: {
+      add: 'all-contributors add',
+      generate: 'all-contributors generate'
+    },
     default: 'nps',
     lint: {
       default: 'eslint src __tests__',
       fix: series.nps('lint --fix')
     },
     package: {
-      default: series.nps('build', 'devPublish.pack', 'devPublish.open'),
+      default: series.nps('build', 'package.pack', 'package.open'),
       open: 'open microauth-vkontakte-0.0.0-development.tgz',
       pack: 'npm pack'
     },
     release: series(
       'semantic-release pre',
-      'npm publish --tag=alpha', // TODO: Remember to change this!!!
+      'npm publish',
       'semantic-release post'
     ),
     reportCoverage: 'codecov',

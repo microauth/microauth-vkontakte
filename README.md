@@ -50,7 +50,7 @@ Information from [Node Green](http://node.green/#ESNEXT-candidate--stage-3-).
 3. Click the button below and add those credentials along with your Zeit API Token to the environment variables requested by `now`.
 4. Use a browser or a tool like [Postman](https://www.getpostman.com/postman) and visit: `https://your-now-url.now.sh/auth/vkontakte`.
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/rockchalkwushock/microauth-vkontakte/example&env=VK_APP_ID&env=VK_APP_SECRET)
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/rockchalkwushock/microauth-vkontakte/tree/master/example&env=VK_APP_ID&env=VK_APP_SECRET)
 
 You may also choose to run the example locally by cloning the repository & following these [instructions](https://github.com/rockchalkwushock/microauth-vkontakte/example/#readme).
 
@@ -98,7 +98,11 @@ npm test
 yarn test
 ```
 
-To verify the package is in working order on your local machine you can run the below script. It will produces `./package`. You can then go into the `./example` directory and change the location of `const microAuthVkontakte = require('../package/lib')`.
+To verify the package is in working order on your local machine you can run the below script. It will produces `./package`. You can then go into the `./example` directory and change the location in which `microauth-vkontakte` is being used:
+
+```js
+const microAuthVkontakte = require('../package/lib')
+```
 
 ```sh
 npm start package

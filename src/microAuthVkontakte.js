@@ -23,22 +23,9 @@ module.exports = options => {
     endpoints.userInfoUrl(config, accessToken)
   // 5. Create storage for 'state' values for checking the responses.
   const states = []
-
-  /**
-   * REVIEW:
-   * Everything above this function resides within a closure meaning none of it is
-   * accessible by the global scope. The only things accessible are whatever the
-   * below function returns.
-   *
-   * That being said the use of the `config` object below could be leaking sensitive data,
-   * (i.e. clientId & clientSecret).
-   *
-   * QUESTION: How can I test that this is/is not the case?
-   */
+  // 6. The asynchronous function used by `micro`.
   return fn => async (req, res, ...args) => {
     const { pathname, query } = parse(req.url)
-
-    // REVIEW using config.path could potentially be leaking data?
     if (pathname === config.path) {
       try {
         const state = v4()
@@ -50,7 +37,6 @@ module.exports = options => {
         return fn(req, res, ...args)
       }
     }
-    // REVIEW using config.redirectUrl could potentially be leaking data?
     const callbackPath = parse(config.redirectUrl).pathname
     if (pathname === callbackPath) {
       try {
@@ -78,7 +64,7 @@ module.exports = options => {
         const result = {
           provider,
           accessToken,
-          info: data.response[0] // promise returns as {[{}]}
+          info: data.response[0]
         }
 
         args.push({ ...result })

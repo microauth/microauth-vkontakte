@@ -1,3 +1,6 @@
+/**
+ * Vkontakte API constants
+ */
 module.exports = {
   apiVersion: '5.68',
   authUrl: 'https://oauth.vk.com/authorize',

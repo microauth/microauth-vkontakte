@@ -1,6 +1,6 @@
 {
   "projectName": "microauth-vkontakte",
-  "projectOwner": "Cody Brunner",
+  "projectOwner": "rockchalkwushock",
   "files": [
     "README.md"
   ],
@@ -10,16 +10,13 @@
     {
       "login": "rockchalkwushock",
       "name": "Cody Brunner",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/19720404?v=3",
-      "profile": "https://github.com/rockchalkwushock",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/19720404?v=4",
+      "profile": "https://rcws-development.com/",
       "contributions": [
         "code",
         "doc",
-        "infra",
         "example",
-        "question",
-        "test",
-        "review"
+        "test"
       ]
     }
   ]

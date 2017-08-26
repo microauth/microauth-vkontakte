@@ -1,7 +1,5 @@
 module.exports = obj => {
   const keys = Object.keys(obj)
-  // If the user does not provide any options throw Error.
-  // Must provide at the very least 'clientId', 'clientSecret', 'redirectUrl'.
   if (keys.length < 3) {
     throw new Error('Must provide configuration options!')
   }

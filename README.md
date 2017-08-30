@@ -1,18 +1,17 @@
 # microauth-vkontakte :closed_lock_with_key:
 
-
 [![npm](https://img.shields.io/npm/v/microauth-vkontakte.svg?style=flat-square)](https://www.npmjs.com/package/microauth-vkontakte)
 [![npm](https://img.shields.io/npm/l/microauth-vkontakte.svg?style=flat-square)](https://www.npmjs.com/package/microauth-vkontakte)
 [![npm](https://img.shields.io/npm/dt/microauth-vkontakte.svg?style=flat-square)](https://www.npmjs.com/package/microauth-vkontakte)
 
-[![CircleCI](https://img.shields.io/circleci/project/github/rockchalkwushock/microauth-vkontakte.svg?style=flat-square)](https://circleci.com/gh/rockchalkwushock/microauth-vkontakte)
-[![Codecov](https://img.shields.io/codecov/c/github/rockchalkwushock/microauth-vkontakte.svg?style=flat-square)](https://codecov.io/gh/rockchalkwushock/microauth-vkontakte)
+[![CircleCI](https://img.shields.io/circleci/project/github/microauth/microauth-vkontakte.svg?style=flat-square)](https://circleci.com/gh/microauth/microauth-vkontakte)
+[![Codecov](https://img.shields.io/codecov/c/github/microauth/microauth-vkontakte.svg?style=flat-square)](https://codecov.io/gh/microauth/microauth-vkontakte)
 [![Greenkeeper](https://img.shields.io/badge/Greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/)
-[![NSP Status](https://nodesecurity.io/orgs/rcws-development/projects/694dfead-2741-4640-934b-1633dc219106/badge)](https://nodesecurity.io/orgs/rcws-development/projects/694dfead-2741-4640-934b-1633dc219106)
-[![Known Vulnerabilities](https://snyk.io/test/github/rockchalkwushock/microauth-vkontakte/badge.svg)](https://snyk.io/test/github/rockchalkwushock/microauth-vkontakte)
+[![NSP Status](https://nodesecurity.io/orgs/microauth/projects/0eefb70e-c3dd-4cd0-986f-ba26c0fbaca7/badge)](https://nodesecurity.io/orgs/microauth/projects/0eefb70e-c3dd-4cd0-986f-ba26c0fbaca7)
+[![Known Vulnerabilities](https://snyk.io/test/github/microauth/microauth-vkontakte/badge.svg)](https://snyk.io/test/github/microauth/microauth-vkontakte)
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/rockchalkwushock/microauth-vkontakte/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/microauth/microauth-vkontakte/pulls)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
@@ -42,9 +41,9 @@ Information from [Node Green](http://node.green/#ESNEXT-candidate--stage-3-).
 4. Add the `https://your-now-url.now.sh` that was generated as the baseURL & authorized redirectURL in your VK Application Dashboard.
 5. Use a browser or a tool like [Postman](https://www.getpostman.com/postman) and visit: `https://your-now-url.now.sh/auth/vkontakte`.
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/rockchalkwushock/microauth-vkontakte/tree/master/example&env=VK_APP_ID&env=VK_APP_SECRET)
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/microauth/microauth-vkontakte/tree/master/example&env=VK_APP_ID&env=VK_APP_SECRET)
 
-You may also choose to run the example locally by cloning the repository & following these [instructions](https://github.com/rockchalkwushock/microauth-vkontakte/example/#readme).
+You may also choose to run the example locally by cloning the repository & following these [instructions](https://github.com/microauth/microauth-vkontakte/example/#readme).
 
 ## Usage
 
@@ -80,7 +79,7 @@ module.exports = vkontakteAuth(async (req, res, auth) => {
 
 ## Default Parameters
 
-The options object you pass to `microAuthVkontakte` has predefined defaults in place. Should you not provide the 3 required parameters `clientId`, `clientSecret`, & `redirectUrl` you will be informed in your terminal with an error message of what you are missing. The other default parameters as well as documentation for valid values accepted by the Vkontakte API can be found [here](https://github.com/rockchalkwushock/microauth-vkontakte/blob/master/src/utils/vkOpts.js).
+The options object you pass to `microAuthVkontakte` has predefined defaults in place. Should you not provide the 3 required parameters `clientId`, `clientSecret`, & `redirectUrl` you will be informed in your terminal with an error message of what you are missing. The other default parameters as well as documentation for valid values accepted by the Vkontakte API can be found [here](https://github.com/microauth/microauth-vkontakte/blob/master/src/utils/vkOpts.js).
 
 ## Security
 
@@ -90,7 +89,7 @@ This package is tested for vulnerabilities to its dependencies by both [Node Sec
 
 ## Contributing
 
-Please read the [CONTRIBUTING.md](https://github.com/rockchalkwushock/microauth-vkontakte/blob/master/CONTRIBUTING.md)
+Please read the [CONTRIBUTING.md](https://github.com/microauth/microauth-vkontakte/blob/master/CONTRIBUTING.md)
 
 ## Development & Testing
 
@@ -114,12 +113,12 @@ yarn start package
 
 ## License
 
-[MIT](https://github.com/rockchalkwushock/microauth-vkontakte/blob/master/LICENSE)
+[MIT](https://github.com/microauth/microauth-vkontakte/blob/master/LICENSE)
 
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars2.githubusercontent.com/u/19720404?v=4" width="100px;"/><br /><sub>Cody Brunner</sub>](https://rcws-development.com/)<br />[💻](https://github.com/rockchalkwushock/microauth-vkontakte/commits?author=rockchalkwushock "Code") [📖](https://github.com/rockchalkwushock/microauth-vkontakte/commits?author=rockchalkwushock "Documentation") [💡](#example-rockchalkwushock "Examples") [⚠️](https://github.com/rockchalkwushock/microauth-vkontakte/commits?author=rockchalkwushock "Tests") |
+| [<img src="https://avatars2.githubusercontent.com/u/19720404?v=4" width="100px;"/><br /><sub>Cody Brunner</sub>](https://rcws-development.com/)<br />[💻](https://github.com/microauth/microauth-vkontakte/commits?author=rockchalkwushock "Code") [📖](https://github.com/microauth/microauth-vkontakte/commits?author=rockchalkwushock "Documentation") [💡](#example-rockchalkwushock "Examples") [⚠️](https://github.com/microauth/microauth-vkontakte/commits?author=rockchalkwushock "Tests") |
 | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):

@@ -1,16 +1,14 @@
 # microauth-vkontakte :closed_lock_with_key:
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/microauth/microauth-vkontakte.svg)](https://greenkeeper.io/)
-
 [![npm](https://img.shields.io/npm/v/microauth-vkontakte.svg?style=flat-square)](https://www.npmjs.com/package/microauth-vkontakte)
 [![npm](https://img.shields.io/npm/l/microauth-vkontakte.svg?style=flat-square)](https://www.npmjs.com/package/microauth-vkontakte)
 [![npm](https://img.shields.io/npm/dt/microauth-vkontakte.svg?style=flat-square)](https://www.npmjs.com/package/microauth-vkontakte)
 
 [![CircleCI](https://img.shields.io/circleci/project/github/microauth/microauth-vkontakte.svg?style=flat-square)](https://circleci.com/gh/microauth/microauth-vkontakte)
 [![Codecov](https://img.shields.io/codecov/c/github/microauth/microauth-vkontakte.svg?style=flat-square)](https://codecov.io/gh/microauth/microauth-vkontakte)
-[![Greenkeeper](https://img.shields.io/badge/Greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/)
 [![NSP Status](https://nodesecurity.io/orgs/microauth/projects/0eefb70e-c3dd-4cd0-986f-ba26c0fbaca7/badge)](https://nodesecurity.io/orgs/microauth/projects/0eefb70e-c3dd-4cd0-986f-ba26c0fbaca7)
 [![Known Vulnerabilities](https://snyk.io/test/github/microauth/microauth-vkontakte/badge.svg)](https://snyk.io/test/github/microauth/microauth-vkontakte)
+[![Greenkeeper badge](https://badges.greenkeeper.io/microauth/microauth-vkontakte.svg)](https://greenkeeper.io/)
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/microauth/microauth-vkontakte/pulls)

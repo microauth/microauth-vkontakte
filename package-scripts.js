@@ -4,6 +4,9 @@ const { concurrent, crossEnv, rimraf, series } = npsUtils
 
 module.exports = {
   scripts: {
+    // NOTE REVIEW
+    // Keep the build script & these packages strictly for users
+    // not operating on node@8.4.x or higher.
     build: `${crossEnv(
       'BABEL_ENV=build'
     )} babel src --out-dir lib --plugins=transform-object-rest-spread`,

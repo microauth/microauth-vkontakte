@@ -73,11 +73,12 @@ jobs:
       - run: yarn install
       # Build the './lib' for distribution.
       - run: yarn start build
-      # Get the git Head reference here.
-      # https://github.com/semantic-release/semantic-release/pull/393
-      - run: yarn start preRelease
       # Publish to NPM with `semantic-release`.
-      - run: yarn start release
+      # NOTE REVIEW
+      # yarn start release || true will address failing builds when no changes
+      # are found by 'semantic-release pre'
+      # https://github.com/semantic-release/semantic-release/issues/449#issuecomment-332754125
+      - run: yarn start release || true
 # Workflows
 # https://circleci.com/docs/2.0/configuration-reference/#workflows
 # https://circleci.com/docs/2.0/workflows/#branch-level-job-execution

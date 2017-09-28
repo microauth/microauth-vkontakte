@@ -28,8 +28,11 @@ module.exports = {
       open: 'open microauth-vkontakte-0.0.0-development.tgz',
       pack: 'npm pack'
     },
-    preRelease: 'semantic-release pre',
-    release: series('npm publish', 'npm show', 'semantic-release post'),
+    release: series(
+      'semantic-release pre',
+      'npm publish',
+      'semantic-release post'
+    ),
     reportCoverage: 'codecov',
     test: {
       default: 'jest --config jest.config.json --runInBand',

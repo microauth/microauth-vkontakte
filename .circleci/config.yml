@@ -26,9 +26,6 @@ jobs:
             - v1-dependencies-{{ checksum "yarn.lock" }}
             - v1-dependencies-
       - run: yarn install
-      # Get the git Head reference here.
-      # https://github.com/semantic-release/semantic-release/pull/393
-      - run: yarn start preRelease
       - save_cache:
           key: v1-dependencies-{{ checksum "yarn.lock" }}
           paths:
@@ -76,6 +73,9 @@ jobs:
       - run: yarn install
       # Build the './lib' for distribution.
       - run: yarn start build
+      # Get the git Head reference here.
+      # https://github.com/semantic-release/semantic-release/pull/393
+      - run: yarn start preRelease
       # Publish to NPM with `semantic-release`.
       - run: yarn start release
 # Workflows

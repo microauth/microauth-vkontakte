@@ -33,6 +33,8 @@ Feature | Node Version | Flags
 
 Information from [Node Green](http://node.green/#ESNEXT-candidate--stage-3-).
 
+> _I will remove the build process when these features become part of LTS._
+
 ## Running the example
 
 1. Setup an account with [Zeit](https://zeit.co).

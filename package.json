@@ -3,14 +3,20 @@
   "version": "0.0.0-development",
   "license": "MIT",
   "description": "Vkontakte OAuth for micro.",
-  "author":
-    "Cody Brunner <rockchalkwushock@icloud.com> (https://rcws-development.com)",
+  "author": "Cody Brunner <rockchalkwushock@icloud.com> (https://rcws-development.com)",
   "homepage": "https://github.com/microauth/microauth-vkontakte#readme",
   "repository": "https://github.com/microauth/microauth-vkontakte.git",
   "bugs": "https://github.com/microauth/microauth-vkontakte/issues",
   "main": "lib/index.js",
-  "files": ["lib", "LICENSE"],
-  "keywords": ["micro", "oauth2", "vkontakte"],
+  "files": [
+    "lib",
+    "LICENSE"
+  ],
+  "keywords": [
+    "micro",
+    "oauth2",
+    "vkontakte"
+  ],
   "scripts": {
     "commit": "nps commit",
     "precommit": "lint-staged && nps validate",
@@ -24,7 +30,10 @@
     }
   },
   "lint-staged": {
-    "*.js": ["yarn prettier", "git add"]
+    "*.js": [
+      "yarn prettier",
+      "git add"
+    ]
   },
   "release": {
     "verifyConditions": "condition-circle"

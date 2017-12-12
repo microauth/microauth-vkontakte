@@ -11,7 +11,7 @@
     "start": "NODE_ENV=development micro"
   },
   "dependencies": {
-    "micro": "~9.0.0",
+    "micro": "latest",
     "microauth-vkontakte": "latest"
   }
 }

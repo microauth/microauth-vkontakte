@@ -7,10 +7,9 @@
   "homepage": "https://github.com/microauth/microauth-vkontakte#readme",
   "repository": "https://github.com/microauth/microauth-vkontakte.git",
   "bugs": "https://github.com/microauth/microauth-vkontakte/issues",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "files": [
-    "lib",
-    "LICENSE"
+    "src"
   ],
   "keywords": [
     "micro",
@@ -18,8 +17,7 @@
     "vkontakte"
   ],
   "scripts": {
-    "commit": "nps commit",
-    "precommit": "lint-staged && nps validate",
+    "cm": "nps commit",
     "prettier": "prettier --single-quote --no-semi --write",
     "start": "nps",
     "test": "nps test"
@@ -29,11 +27,31 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && nps validate.withCoverage"
+    }
+  },
   "lint-staged": {
     "*.js": [
       "yarn prettier",
       "git add"
     ]
+  },
+  "jest": {
+    "bail": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    },
+    "testEnvironment": "node"
   },
   "release": {
     "verifyConditions": "condition-circle"
@@ -48,23 +66,20 @@
     "uuid": "~3.1.0"
   },
   "devDependencies": {
-    "all-contributors-cli": "~4.5.0",
-    "babel-cli": "~6.26.0",
-    "babel-plugin-transform-object-rest-spread": "~6.26.0",
-    "codecov": "~2.3.0",
+    "all-contributors-cli": "~4.10.0",
+    "codecov": "~3.0.0",
     "commitizen": "~2.9.6",
-    "condition-circle": "~1.5.0",
-    "cz-conventional-changelog": "~2.0.0",
-    "eslint": "~4.7.2",
+    "condition-circle": "~2.0.0",
+    "cz-conventional-changelog": "~2.1.0",
+    "eslint": "~4.13.1",
     "eslint-config-equimper": "~2.2.1",
-    "eslint-config-prettier": "~2.6.0",
-    "husky": "~0.14.3",
+    "eslint-config-prettier": "~2.9.0",
     "jest": "~21.2.0",
-    "lint-staged": "~4.2.3",
+    "lint-staged": "~6.0.0",
     "nps": "~5.7.1",
-    "nps-utils": "~1.3.0",
-    "nsp": "~2.8.1",
-    "prettier": "~1.7.0",
-    "semantic-release": "~8.0.3"
+    "nps-utils": "~1.5.0",
+    "nsp": "~3.1.0",
+    "prettier": "~1.9.2",
+    "semantic-release": "~8.2.0"
   }
 }

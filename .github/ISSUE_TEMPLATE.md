@@ -7,7 +7,7 @@
 
 <!-- TODO Checked checkbox should look like this: [x] -->
 
-- [ ] I have searched the [issues]() of this repository and believe that this is not a duplicate.
+- [ ] I have searched the [issues](https://github.com/microauth/microauth-vkontakte/issues) of this repository and believe that this is not a duplicate.
 
 ## Expected Behavior
 

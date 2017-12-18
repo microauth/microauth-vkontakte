@@ -59,7 +59,7 @@
     "eslint-config-equimper": "~2.2.1",
     "eslint-config-prettier": "~2.6.0",
     "husky": "~0.14.3",
-    "jest": "~21.2.0",
+    "jest": "~22.0.0",
     "lint-staged": "~4.2.3",
     "nps": "~5.7.1",
     "nps-utils": "~1.3.0",

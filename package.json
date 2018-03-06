@@ -17,7 +17,6 @@
     "vkontakte"
   ],
   "scripts": {
-    "build": "nps build",
     "cm": "nps commit",
     "start": "nps",
     "test": "nps test"

@@ -3,14 +3,13 @@
   "version": "0.0.0-development",
   "license": "MIT",
   "description": "Vkontakte OAuth for micro.",
-  "author": "Cody Brunner <rockchalkwushock@icloud.com> (https://rcws-development.com)",
+  "author": "Cody Brunner <rockchalkwushock@icloud.com> (https://codybrunner.me)",
   "homepage": "https://github.com/microauth/microauth-vkontakte#readme",
   "repository": "https://github.com/microauth/microauth-vkontakte.git",
   "bugs": "https://github.com/microauth/microauth-vkontakte/issues",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "files": [
-    "lib",
-    "LICENSE"
+    "src"
   ],
   "keywords": [
     "micro",
@@ -18,9 +17,7 @@
     "vkontakte"
   ],
   "scripts": {
-    "commit": "nps commit",
-    "precommit": "lint-staged && nps validate",
-    "prettier": "prettier --single-quote --no-semi --write",
+    "cm": "nps commit",
     "start": "nps",
     "test": "nps test"
   },
@@ -29,42 +26,65 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "lint-staged": {
-    "*.js": [
-      "yarn prettier",
-      "git add"
+  "eslintConfig": {
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "extends": [
+      "equimper",
+      "prettier"
     ]
   },
-  "release": {
-    "verifyConditions": "condition-circle"
+  "husky": {
+    "hooks": {
+      "pre-commit": "nps validate.withCoverage && lint-staged"
+    }
+  },
+  "jest": {
+    "bail": true,
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --no-semi --write",
+      "git add"
+    ]
   },
   "peerDependencies": {
     "micro": ">=7.3.0"
   },
   "dependencies": {
-    "micro-redirect": "~1.0.0",
-    "request": "~2.83.0",
-    "request-promise": "~4.2.0",
-    "uuid": "~3.1.0"
+    "micro-redirect": "^1.0.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.0",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
-    "all-contributors-cli": "~4.5.0",
-    "babel-cli": "~6.26.0",
-    "babel-plugin-transform-object-rest-spread": "~6.26.0",
-    "codecov": "~2.3.0",
-    "commitizen": "~2.9.6",
-    "condition-circle": "~1.5.0",
-    "cz-conventional-changelog": "~2.0.0",
-    "eslint": "~4.7.2",
-    "eslint-config-equimper": "~2.2.1",
-    "eslint-config-prettier": "~2.6.0",
-    "husky": "~0.14.3",
-    "jest": "~21.2.0",
-    "lint-staged": "~4.2.3",
-    "nps": "~5.7.1",
-    "nps-utils": "~1.3.0",
-    "nsp": "~2.8.1",
-    "prettier": "~1.7.0",
-    "semantic-release": "~8.0.3"
+    "all-contributors-cli": "^4.11.0",
+    "codecov": "^3.0.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.18.2",
+    "eslint-config-equimper": "^2.2.2",
+    "eslint-config-prettier": "^2.9.0",
+    "husky": "^0.15.0-rc.8",
+    "jest": "^22.4.2",
+    "lint-staged": "^7.0.0",
+    "nps": "^5.8.1",
+    "nps-utils": "^1.5.0",
+    "prettier": "^1.11.1",
+    "semantic-release": "^12.4.1"
   }
 }

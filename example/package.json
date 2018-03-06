@@ -3,15 +3,14 @@
   "version": "0.1.0",
   "description": "Basic example for using this package.",
   "main": "index.js",
-  "author":
-    "Cody Brunner <rockchalkwushock@icloud.com> (https://rcws-development.com)",
+  "author": "Cody Brunner <rockchalkwushock@icloud.com> (https://codybrunner.me)",
   "license": "MIT",
   "scripts": {
     "now-start": "NODE_ENV=production micro",
     "start": "NODE_ENV=development micro"
   },
   "dependencies": {
-    "micro": "~9.0.0",
+    "micro": "~9.1.0",
     "microauth-vkontakte": "latest"
   }
 }

@@ -26,42 +26,28 @@ Visit the [issue tracker](https://github.com/microauth/microauth-vkontakte/issue
 
 Fork, then clone the repository:
 
-```bash
-git clone
-```
-
-### Building
-
-Running the build.
-
-```bash
-npm start build
+```sh
+git clone https://github.com/microauth/microauth-vkontakte.git
 ```
 
 ### Linting & Testing
 
-To run all at once, run the following:
-
-```bash
-npm run precommit
-```
-
 To run only tests:
 
-```bash
-npm test
+```sh
+yarn test
 ```
 
 To run only linting:
 
-```bash
-npm run lint
+```sh
+yarn start lint
 ```
 
 To continuously watch and run tests:
 
-```bash
-npm run test:watch
+```sh
+yarn start test.watch
 ```
 
 ## Docs

@@ -21,7 +21,7 @@ What issue is this in reference too?
 $ git add -A
 ### confirm correct files are present.
 $ git status
-$ npm run commit || yarn commit
+$ npm run cm || yarn cm
 ### If linting or testing fails fix and repeat.
 ### Fill in the pertinent information based on your changes in the commitizen log.
 $ git push origin <branch>

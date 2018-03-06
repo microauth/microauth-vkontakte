@@ -6,7 +6,6 @@
 
 [![CircleCI](https://img.shields.io/circleci/project/github/microauth/microauth-vkontakte.svg?style=flat-square)](https://circleci.com/gh/microauth/microauth-vkontakte)
 [![Codecov](https://img.shields.io/codecov/c/github/microauth/microauth-vkontakte.svg?style=flat-square)](https://codecov.io/gh/microauth/microauth-vkontakte)
-[![NSP Status](https://nodesecurity.io/orgs/microauth/projects/0eefb70e-c3dd-4cd0-986f-ba26c0fbaca7/badge)](https://nodesecurity.io/orgs/microauth/projects/0eefb70e-c3dd-4cd0-986f-ba26c0fbaca7)
 [![Known Vulnerabilities](https://snyk.io/test/github/microauth/microauth-vkontakte/badge.svg)](https://snyk.io/test/github/microauth/microauth-vkontakte)
 [![Greenkeeper badge](https://badges.greenkeeper.io/microauth/microauth-vkontakte.svg)](https://greenkeeper.io/)
 
@@ -21,20 +20,6 @@
 
 > Vkontakte OAuth for [`micro`](https://github.com/zeit/micro).
 
-## Note to users
-
-> At the time of writing this package the following are supported:
-
-Feature | Node Version | Flags
----------|----------|---------
- `async/await` | `^8.x.x` | no
- `object rest properties` | `^8.4.0` | `8.2.1` with `--harmony`
- `object spread properties` | `^8.4.0` | `8.2.1` with `--harmony`
-
-Information from [Node Green](http://node.green/#ESNEXT-candidate--stage-3-).
-
-> _I will remove the build process when these features become part of LTS._
-
 ## Running the example
 
 1. Setup an account with [Zeit](https://zeit.co).
@@ -45,7 +30,7 @@ Information from [Node Green](http://node.green/#ESNEXT-candidate--stage-3-).
 
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/microauth/microauth-vkontakte/tree/master/example&env=VK_APP_ID&env=VK_APP_SECRET)
 
-You may also choose to run the example locally by cloning the repository & following these [instructions](https://github.com/microauth/microauth-vkontakte/example/#readme).
+You may also choose to run the example locally by cloning the repository & following these [instructions](https://github.com/microauth/microauth-vkontakte/example).
 
 ## Usage
 
@@ -87,7 +72,7 @@ The options object you pass to `microAuthVkontakte` has predefined defaults in p
 
 It is your responsibility as a developer to not expose your secure data publicly! Please use such packages as `dotenv` or `dotenv-safe` to manage your secure data through environment variables.
 
-This package is tested for vulnerabilities to its dependencies by both [Node Security Platform (NSP)](https://nodesecurity.io) & [Snyk](https://snyk.io) to aid in maintaining the integrity of your projects.
+This package is tested for vulnerabilities to its dependencies by [Snyk](https://snyk.io) to aid in maintaining the integrity of your projects.
 
 ## Contributing
 
@@ -104,7 +89,7 @@ yarn test
 To verify the package is in working order on your local machine you can run the below script. It will produces `./package`. You can then go into the `./example` directory and change the location in which `microauth-vkontakte` is being used:
 
 ```js
-const microAuthVkontakte = require('../package/lib')
+const microAuthVkontakte = require('../package/src')
 ```
 
 ```sh
@@ -121,7 +106,7 @@ yarn start package
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 | [<img src="https://avatars2.githubusercontent.com/u/19720404?v=4" width="100px;"/><br /><sub>Cody Brunner</sub>](https://rcws-development.com/)<br />[💻](https://github.com/microauth/microauth-vkontakte/commits?author=rockchalkwushock "Code") [📖](https://github.com/microauth/microauth-vkontakte/commits?author=rockchalkwushock "Documentation") [💡](#example-rockchalkwushock "Examples") [⚠️](https://github.com/microauth/microauth-vkontakte/commits?author=rockchalkwushock "Tests") |
-| :---: |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 

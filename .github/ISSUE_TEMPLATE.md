@@ -7,7 +7,7 @@
 
 <!-- TODO Checked checkbox should look like this: [x] -->
 
-- [ ] I have searched the [issues]() of this repository and believe that this is not a duplicate.
+- [ ] I have searched the [issues](https://github.com/microauth/microauth-vkontakte/issues) of this repository and believe that this is not a duplicate.
 
 ## Expected Behavior
 
@@ -32,7 +32,7 @@
 
 <!--- Include as many relevant details about the environment you experienced the bug in -->
 | Tech            | Version |
-|-----------------|---------|
+| --------------- | ------- |
 | `micro`         |         |
 | `node`          |         |
 | `npm` or `yarn` |         |

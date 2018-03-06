@@ -31,7 +31,6 @@ module.exports = {
     },
     validate: {
       default: series.nps('lint.fix'),
-      dependencies: 'snyk test',
       withCoverage: series.nps('validate', 'test.coverage')
     }
   }

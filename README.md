@@ -6,7 +6,6 @@
 
 [![CircleCI](https://img.shields.io/circleci/project/github/microauth/microauth-vkontakte.svg?style=flat-square)](https://circleci.com/gh/microauth/microauth-vkontakte)
 [![Codecov](https://img.shields.io/codecov/c/github/microauth/microauth-vkontakte.svg?style=flat-square)](https://codecov.io/gh/microauth/microauth-vkontakte)
-[![Known Vulnerabilities](https://snyk.io/test/github/microauth/microauth-vkontakte/badge.svg)](https://snyk.io/test/github/microauth/microauth-vkontakte)
 [![Greenkeeper badge](https://badges.greenkeeper.io/microauth/microauth-vkontakte.svg)](https://greenkeeper.io/)
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
@@ -71,8 +70,6 @@ The options object you pass to `microAuthVkontakte` has predefined defaults in p
 ## Security
 
 It is your responsibility as a developer to not expose your secure data publicly! Please use such packages as `dotenv` or `dotenv-safe` to manage your secure data through environment variables.
-
-This package is tested for vulnerabilities to its dependencies by [Snyk](https://snyk.io) to aid in maintaining the integrity of your projects.
 
 ## Contributing
 

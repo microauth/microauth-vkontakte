@@ -20,15 +20,6 @@ jobs:
       - persist_to_workspace:
           root: .
           paths: .
-  check_dependencies:
-    docker:
-      - image: 'circleci/node:latest'
-    working_directory: ~/microauth-vkontakte
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/microauth-vkontakte
-      - run: yarn start validate.dependencies
   validate_code:
     docker:
       - image: 'circleci/node:latest'
@@ -92,31 +83,24 @@ workflows:
   test_and_release:
     jobs:
       - checkout_code
-      - check_dependencies:
-          requires:
-            - checkout_code
       - validate_code:
           requires:
             - checkout_code
       - test_node_6:
           requires:
             - checkout_code
-            - check_dependencies
             - validate_code
       - test_node_7:
           requires:
             - checkout_code
-            - check_dependencies
             - validate_code
       - test_node_8:
           requires:
             - checkout_code
-            - check_dependencies
             - validate_code
       - test_latest_and_report:
           requires:
             - checkout_code
-            - check_dependencies
             - validate_code
       - release:
           requires:

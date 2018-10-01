@@ -74,7 +74,7 @@
   "devDependencies": {
     "all-contributors-cli": "^4.11.1",
     "codecov": "^3.0.0",
-    "commitizen": "^2.9.6",
+    "commitizen": "^3.0.1",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.19.1",
     "eslint-config-equimper": "^2.2.2",

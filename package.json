@@ -85,7 +85,7 @@
     "nps": "^5.9.0",
     "nps-utils": "^1.5.0",
     "prettier": "^1.12.0",
-    "semantic-release": "^15.1.7",
+    "semantic-release": "^15.9.17",
     "snyk": "^1.71.0"
   }
 }

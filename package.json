@@ -79,7 +79,7 @@
     "eslint": "^4.19.1",
     "eslint-config-equimper": "^2.2.2",
     "eslint-config-prettier": "^2.9.0",
-    "husky": "^1.0.0-rc.1",
+    "husky": "^2.2.0",
     "jest": "^22.4.3",
     "lint-staged": "^7.0.4",
     "nps": "^5.9.0",

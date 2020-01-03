@@ -4101,9 +4101,10 @@ merge@^1.1.3, merge@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
 
-micro-redirect@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/micro-redirect/-/micro-redirect-1.0.0.tgz#aef703984f4ee46cfbbbfe2281cacc6f370d669e"
+micro-redirect@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/micro-redirect/-/micro-redirect-1.0.2.tgz#f2fa6686e5a404992abb1fe228341323af4699fd"
+  integrity sha512-lRx+OBr+5WFEoQ/f1R6FgPIprVGwf0HBda1DXvRUPtjGqzxAgTf243MfPFF6xQJ7G9YQR+C3QlZrCsRI9IkJVw==
 
 micromatch@^2.3.11, micromatch@^2.3.7:
   version "2.3.11"

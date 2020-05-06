@@ -19,7 +19,9 @@
   "scripts": {
     "cm": "nps commit",
     "start": "nps",
-    "test": "nps test"
+    "test": "nps test",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "config": {
     "commitizen": {
@@ -69,7 +71,8 @@
     "micro-redirect": "^1.0.0",
     "request": "^2.85.0",
     "request-promise": "^4.2.0",
-    "uuid": "^3.2.1"
+    "uuid": "^3.2.1",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "all-contributors-cli": "^4.11.1",
@@ -85,7 +88,7 @@
     "nps": "^5.9.0",
     "nps-utils": "^1.5.0",
     "prettier": "^1.12.0",
-    "semantic-release": "^15.1.7",
-    "snyk": "^1.71.0"
-  }
+    "semantic-release": "^15.1.7"
+  },
+  "snyk": true
 }

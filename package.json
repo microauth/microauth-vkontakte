@@ -73,7 +73,7 @@
   },
   "devDependencies": {
     "all-contributors-cli": "^4.11.1",
-    "codecov": "^3.0.0",
+    "codecov": "^3.7.0",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.19.1",
